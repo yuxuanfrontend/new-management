@@ -234,6 +234,7 @@ export default {
     putinSave() {
       this.$request('post', 'api/v1/putin/putin')
       .send({
+        invNo: this.invNo,
         checkNo: this.checkNo,
         sealNo1: this.head.sealNo1,
         sealNo2: this.head.sealNo2,

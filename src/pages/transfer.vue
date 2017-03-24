@@ -183,6 +183,7 @@ export default {
     transferSave() {
       this.$request('post', '/api/v1/transfer/transfer')
       .send({
+        invNo: this.transferNo,
         vehicleNo: this.vehicleNo,
         receiveUser: this.receiveUser,
         deliveryUser: this.deliveryUser,

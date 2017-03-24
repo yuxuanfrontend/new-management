@@ -98,7 +98,7 @@ label {
             <button type="button" class="btn btn-default" @click="selectBoxes">选择仓库箱号</button>
             <button type="button" class="btn btn-default" @click="save">保存</button>
             <!-- <a class="button is-primary" :href="'http://192.168.228.239/delivery_print.jsp?invno=' + outWareId">打印提货单</a> -->
-            <a class="btn btn-default" target="_blank" :href="'packingListtag.jsp?invno=' + lclId">打印箱封单</a>
+            <a class="btn btn-default" target="_blank" :href="'packingListtag.jsp?invno=' + lclId">打印箱贴</a>
             <a class="btn btn-default" target="_blank" :href="'packingList.jsp?invno=' + lclId">打印装箱清单</a>
           </div>
         </div>

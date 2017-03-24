@@ -44,7 +44,7 @@
     </div>
     <table-editable :titles="tableTitles" ref="oneTable" :data="boxes" :selectDatas="dataArr" :keys="boxkeys" :is-calculate="true" :is-editable="true" :calculable-key="['出库数量']">
     </table-editable>
-    <distributiondialog ref="dialog"  :show="isShowDialog" :checkArrData="newCheckArr" @close-dialog="closeDialog"></distributiondialog>
+    <allocate-dialog ref="dialog"  :show="isShowDialog" :checkArrData="newCheckArr" @close-dialog="closeDialog"></allocate-dialog>
   </div>
 </template>
 
@@ -53,7 +53,7 @@ import moment from 'moment'
 /* eslint-disable no-new */
 import Flatpickr from 'flatpickr'
 import tableEditable from '../components/table-editable'
-import distributiondialog from './distribution-dialog'
+import allocateDialog from './allocate-dialog'
 
 // import datePickerZh from 'flatpickr/dist/l10n/zh'
 
@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       tableTitles: ['提货日期', '客户账号', '客户姓名', '产品代码', '产品名称', '提货申请数量', '状态'],
-      boxkeys: ['inv_date', '用户ID', '用户名称', '商品标识', '商品名称', '出库数量', '出库状态'],
+      boxkeys: ['inv_date', '用户ID', '用户名称', '商品标识', '商品名称', '出库数量', 'status'],
       boxes: [],
       isShowDialog: false,
       dataArr: [],
@@ -74,7 +74,7 @@ export default {
     }
   },
   components: {
-    distributiondialog,
+    allocateDialog,
     commonMenu,
     tableEditable,
   },
